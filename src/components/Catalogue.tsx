@@ -34,6 +34,10 @@ export class Catalogue extends React.Component<ICatalogueProps>
     // Remove this product by the ID!
     this.props.removeItemFromCatalogue( id );
   }
+
+  // validate = {} => {
+
+  // }
   render ()
   {
     return (
@@ -42,9 +46,13 @@ export class Catalogue extends React.Component<ICatalogueProps>
           <Form onSubmit={this.newProduct}>
             <Form.Field>
               <label htmlFor="product-name">Task Name/Title:</label>
-              <Input name="product-name" type='text' />
+              <Input 
+                name="product-name" 
+                placeholder='Enter task here...'
+              />
+              
             </Form.Field>
-            <Input type="submit" value="Add" />
+            <Input type="submit" value="Submit" />
           </Form>
         </Grid.Row>
         <h3>Tasks</h3>
